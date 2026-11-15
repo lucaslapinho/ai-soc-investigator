@@ -1,0 +1,9 @@
+{
+  "id": "B15",
+  "title": "Geo/MFA",
+  "prompt": "Login de outro país com MFA, é comprometimento?",
+  "input": {
+    "vpn": "unknown",
+    "session_use": "unknown"
+  }
+}

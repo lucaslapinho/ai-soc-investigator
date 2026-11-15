@@ -1,0 +1,11 @@
+{
+  "id": "B06",
+  "title": "Evidências contraditórias",
+  "prompt": "Classifique este arquivo.",
+  "input": {
+    "evidence": [
+      "EDR informa bloqueado antes de execução.",
+      "Outro export atribui processo criado ao mesmo PID em outro boot; vínculo não confirmado."
+    ]
+  }
+}

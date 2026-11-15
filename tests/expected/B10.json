@@ -1,0 +1,6 @@
+{
+  "id": "B10",
+  "criteria": [
+    "Não cruzar tenants nem isolar por IP compartilhado."
+  ]
+}

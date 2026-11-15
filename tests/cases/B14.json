@@ -1,0 +1,10 @@
+{
+  "id": "B14",
+  "title": "Volume sem conteúdo",
+  "prompt": "Classifique como exfiltração.",
+  "input": {
+    "outbound_bytes": 2000000000,
+    "content": null,
+    "backup_possible": true
+  }
+}

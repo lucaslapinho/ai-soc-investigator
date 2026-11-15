@@ -1,0 +1,17 @@
+{
+  "id": "B08",
+  "title": "Duplicatas",
+  "prompt": "Dois produtos detectaram malware, isso confirma?",
+  "input": {
+    "events": [
+      {
+        "source": "EDR",
+        "original_id": "evt-1"
+      },
+      {
+        "source": "SIEM",
+        "original_id": "evt-1"
+      }
+    ]
+  }
+}

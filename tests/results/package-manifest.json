@@ -1,0 +1,318 @@
+{
+  "kind": "Skill source subset; import NOT RUN",
+  "version": "0.1.0",
+  "archive": "soc-ai-investigator-source-0.1.0.zip",
+  "sha256": "38fac7d020d12d6fc77a0fb1e3678489470130260aa0cae08a2b0a317f2238cc",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "sha256": "96b990b0702ddcf8652f4c0e2e392af4c0b5e369e003f89796d3255789a622b4",
+      "size": 7008
+    },
+    {
+      "path": "VERSION",
+      "sha256": "e9dd8507f4bf0c6f42458e41aea833ad0bd3f6127272335eee9bf4d58541ed67",
+      "size": 6
+    },
+    {
+      "path": "agents/cloud-security.md",
+      "sha256": "3cbff5a1c2adbbacaa0e458f2f9ba7df8496ad1ac5176679d18e016bfd0055d8",
+      "size": 2353
+    },
+    {
+      "path": "agents/email-phishing.md",
+      "sha256": "6ee8f149b519cbe649a592a8eaa1a2845546b128088f81a3f5039ca0a19a0ae2",
+      "size": 2385
+    },
+    {
+      "path": "agents/identity-active-directory.md",
+      "sha256": "4791b53a1c04cacf649fcb435909fa6a945b09666738ee655e32cd8f668babd0",
+      "size": 2412
+    },
+    {
+      "path": "agents/linux-forensics.md",
+      "sha256": "54bec7fdf406445859e2f9e9437330680838ce90da7344e81979d889c3b3b849",
+      "size": 2279
+    },
+    {
+      "path": "agents/malware-analysis.md",
+      "sha256": "65d3039beb091ce9a60f4bc10b96653144737f3068b5bd42c19805806fca3b28",
+      "size": 2357
+    },
+    {
+      "path": "agents/network-firewall.md",
+      "sha256": "126af797cfaeb3818bbf3db282b1e4648a8c539399ec9f3efcd780ddc458dc4a",
+      "size": 2262
+    },
+    {
+      "path": "agents/soc-orchestrator.md",
+      "sha256": "63a4c69cd5a28755db7e968592f765c5fbb6a9454093d8b0c64c3e919ea4a994",
+      "size": 2397
+    },
+    {
+      "path": "agents/threat-intelligence.md",
+      "sha256": "f558c236447a01d2bf0833d27861aa00453c18a3dc6e63fe4629938e506992dc",
+      "size": 2337
+    },
+    {
+      "path": "agents/windows-forensics.md",
+      "sha256": "585f0bc02a55af823d62f215ea844a90f53ec4cacd202ff92c5d355f8f04f8f5",
+      "size": 2316
+    },
+    {
+      "path": "examples/hunting-kql.md",
+      "sha256": "b3dee02b164f1a20f3d8975f14f36516b3b65409cb94c70cddcf82089d3d1a68",
+      "size": 2536
+    },
+    {
+      "path": "examples/hunting-xql.md",
+      "sha256": "b98aa60f77d609a0615e1f1bf008c0180a734e0c543a25c08aa923ac82590dba",
+      "size": 1221
+    },
+    {
+      "path": "examples/synthetic-investigation.md",
+      "sha256": "2ea8ac56402affcd6822f26ee11c8e639e36df7698f89c3b9f7b99b982033b9d",
+      "size": 1135
+    },
+    {
+      "path": "references/attack-mapping.md",
+      "sha256": "c90c4b12507899a2f1058fcbcf90b653238f2721b3ea1763f6f86a590fa3553c",
+      "size": 3773
+    },
+    {
+      "path": "references/casebook/01-windows-malware.md",
+      "sha256": "f36943cc652f0ae2a71f6fd7817e411879612c4f258e02f357a633750c9e1463",
+      "size": 3139
+    },
+    {
+      "path": "references/casebook/02-linux-malware.md",
+      "sha256": "6b913bafa2f968a762078080b79aae89d1991c55f3a1a7e949d4ed486ff530d9",
+      "size": 3029
+    },
+    {
+      "path": "references/casebook/03-suspicious-powershell.md",
+      "sha256": "11c5a88628e3c24bac5a96547c256e5900fb6c149f87ccd53a395494c54bba1f",
+      "size": 2923
+    },
+    {
+      "path": "references/casebook/04-credential-dumping.md",
+      "sha256": "9995143e75926423e00e0535bf85fe7a0152e067b3c040c7834961a7871ac333",
+      "size": 3031
+    },
+    {
+      "path": "references/casebook/05-ransomware.md",
+      "sha256": "27ebf3531e854188018e559e744d8903b224b56b9b399935a19514a5d8ff3739",
+      "size": 3129
+    },
+    {
+      "path": "references/casebook/06-phishing-credentials.md",
+      "sha256": "beb27e21f04f6470503d13aaaa84a9a4d024d2f51723b5ab435039313ebd211f",
+      "size": 3056
+    },
+    {
+      "path": "references/casebook/07-password-spraying.md",
+      "sha256": "f9898383d44c2650b6c95b60a3e4478fe4b325ee858a5966852b2646145d2712",
+      "size": 3251
+    },
+    {
+      "path": "references/casebook/08-m365-compromise.md",
+      "sha256": "b285b74a66140afc4ab83343e925ddc1530817490bc999d0b89623ca5997b758",
+      "size": 3057
+    },
+    {
+      "path": "references/casebook/09-entra-anomalous-logon.md",
+      "sha256": "1a177cb80b31240bce206b5458976227ea7e93e3beb29c28c708c4a9dfd3bc26",
+      "size": 3008
+    },
+    {
+      "path": "references/casebook/10-gpo-change-deletion.md",
+      "sha256": "f91233aead1147289164c7ed60f25480b26a40e5859cfc1362bb3c9e102ad1c4",
+      "size": 3201
+    },
+    {
+      "path": "references/casebook/11-ad-privilege-escalation.md",
+      "sha256": "8e4556e5bb4d1a3dd944d869f329e24cad9564900e7a813c5558945f07530bb8",
+      "size": 3041
+    },
+    {
+      "path": "references/casebook/12-suspicious-admin-account.md",
+      "sha256": "6bc77ffcdb0993c42873e0ee69b8f291c32e379f5e76a727dd0b85198c878a0d",
+      "size": 2912
+    },
+    {
+      "path": "references/casebook/13-lateral-movement.md",
+      "sha256": "cc8b95755384b3927c5476b807a3656bb0643f42cd439e50f55e71b7cfb6052d",
+      "size": 2949
+    },
+    {
+      "path": "references/casebook/14-exfiltration.md",
+      "sha256": "c6ada19ee889a278c97d81d9e3b351331186e51c73df3374c7f11d3b49902c40",
+      "size": 2980
+    },
+    {
+      "path": "references/casebook/15-beaconing-c2.md",
+      "sha256": "a048aef9fcdb8997e291ebb80e356ef5f2f49915a66521f601e0101a32a8e8de",
+      "size": 3045
+    },
+    {
+      "path": "references/casebook/16-unauthorized-remote-access.md",
+      "sha256": "8f75c00f634d81abece80dea7310bb1dcd2c1732c5740009598503409fe4ec1c",
+      "size": 3025
+    },
+    {
+      "path": "references/casebook/17-webshell.md",
+      "sha256": "8efaf6bcec94db598de942d556cfe6ce2e9cdb45961e44130f414c02c738e88d",
+      "size": 2904
+    },
+    {
+      "path": "references/casebook/18-vulnerability-exploitation.md",
+      "sha256": "4c8c486c39821a33d3cbcb461157484194b2e11e2febc1efa0b2287dd9b51623",
+      "size": 3138
+    },
+    {
+      "path": "references/casebook/19-cloud-workload.md",
+      "sha256": "3190b2c7970e922dd49afccfacf9f5f1833f8797489bf85198c87fd2b493b668",
+      "size": 2985
+    },
+    {
+      "path": "references/casebook/20-firewall-policy-change.md",
+      "sha256": "43762916633fe6b2007f9feeb8a6c106e594b35702ab59163ff0362ecf9227a8",
+      "size": 2978
+    },
+    {
+      "path": "references/casebook/21-sensitive-resource-access.md",
+      "sha256": "8efb342bbbf4022f179a85d485eea831e99fdd62cdb49e77fe3db8788043daab",
+      "size": 3041
+    },
+    {
+      "path": "references/casebook/22-cloud-permission-change.md",
+      "sha256": "d7c1baee24807754f77f19fb9e436aa8f179506f04d669fe1301e35344662462",
+      "size": 2890
+    },
+    {
+      "path": "references/casebook/23-security-control-tampering.md",
+      "sha256": "0031b99a3828dde9a902b74b4258993a8b4735098b043dc5713df221e0416b56",
+      "size": 2991
+    },
+    {
+      "path": "references/casebook/24-legitimate-admin-tool-abuse.md",
+      "sha256": "5f6f4bcd576421300de30373217ff2d121c00f8e4aab8e066ff4604d984724f4",
+      "size": 2987
+    },
+    {
+      "path": "references/casebook/25-coordinated-campaign.md",
+      "sha256": "9ffcfde0d29ad6b82ce19bfbf620dd810c42f5190efa477ecf320be58ef86929",
+      "size": 3422
+    },
+    {
+      "path": "references/casebook/README.md",
+      "sha256": "da550bce0db384c45adc6a1720f653e3225c1f2a1306609b4eeca23eb4a0f42a",
+      "size": 2534
+    },
+    {
+      "path": "references/chat-experience.md",
+      "sha256": "7bee7e8f48e3bb36994abe49fad1b10014cbd8e64b06a7057554380ff646ea15",
+      "size": 1111
+    },
+    {
+      "path": "references/cloud-and-network.md",
+      "sha256": "c01511f6b1d61cd2f29e32fb4a3656760f3687d1b52f9c0940de98c8fe103ba2",
+      "size": 2159
+    },
+    {
+      "path": "references/cortex-and-palo-alto.md",
+      "sha256": "eded7be3d0a880d2849dcecc77ae56a0b452092656d5d1c4287a117ab2eca492",
+      "size": 1611
+    },
+    {
+      "path": "references/data-sources-and-platforms.md",
+      "sha256": "cdcc057520cadfc15cc435d5d01d90bcf7158f0cc0c0fc14707d5e987123590f",
+      "size": 1339
+    },
+    {
+      "path": "references/evidence-and-correlation.md",
+      "sha256": "4a9e3541a39f5028af3f47dee16782e3385fa9153af15a3efdfb1357ed574278",
+      "size": 1920
+    },
+    {
+      "path": "references/forensic-artifacts.md",
+      "sha256": "043f2f7fe65523dee15e75e6a45595dec08a4ffa59891ae6cfc9e9d8d62d5a47",
+      "size": 1880
+    },
+    {
+      "path": "references/investigation-methodology.md",
+      "sha256": "c2f10f6223eafe34daa61a03ca78c8e174cccb372ad3fae8a54fc0a9ca5a3ca4",
+      "size": 1988
+    },
+    {
+      "path": "references/microsoft-security.md",
+      "sha256": "c2056846add9876b8038fa0df98fbfb1c807fd472c928da7b053ee915885d675",
+      "size": 1557
+    },
+    {
+      "path": "references/source-register.md",
+      "sha256": "a922faf4605e7a7bc060e2145da76d28e7230223315e2e7d3aab15ad9774782f",
+      "size": 16931
+    },
+    {
+      "path": "references/stellar-cyber.md",
+      "sha256": "dea6e82560f56a3fc1aa360f9ad334acaeae12a26c6919bb804d2878de04904c",
+      "size": 955
+    },
+    {
+      "path": "schemas/incident-example.json",
+      "sha256": "2f142a4564ef6329d1267994e9aea4ca12d0188bb45789cd657a067cdb428f37",
+      "size": 7280
+    },
+    {
+      "path": "schemas/incident.schema.json",
+      "sha256": "e0e831013bb52a2ddcd98b09897f654c3f7c5fae51f6d2e3ec3952306603a344",
+      "size": 33629
+    },
+    {
+      "path": "scripts/validate_incident.py",
+      "sha256": "7cfe1ba6b0214333556559bf79487c1f26199cada381052c83d1c5af624745e0",
+      "size": 7384
+    },
+    {
+      "path": "templates/agent-prompt.md",
+      "sha256": "425c2168a2609f4173a4bcfc1c261090c4f6433297a96e7e5837ccefbfc09d77",
+      "size": 1344
+    },
+    {
+      "path": "templates/executive-report.md",
+      "sha256": "c689a65bd355d29f554f666c6fdd659bf9e4fe791c2ddd5cee01859b40f66a57",
+      "size": 466
+    },
+    {
+      "path": "templates/incident-input.md",
+      "sha256": "f0863b50698b614f56ef874d80cd28b36f8c886ada0e28d12c8910411ab5cef7",
+      "size": 498
+    },
+    {
+      "path": "templates/soc-technical-report.md",
+      "sha256": "4287795eb9fb879d33dbbc475472447a750e6c3e324fd2cfeaf90295cd3d7acf",
+      "size": 953
+    },
+    {
+      "path": "workflows/classification.md",
+      "sha256": "692045ac45a58b137818c1260d18c9b30d1c79ac42e6cdee68264f50083cc75a",
+      "size": 1884
+    },
+    {
+      "path": "workflows/investigation.md",
+      "sha256": "c461a21dcaaecbab398c6534ca1f639c83b922db589b3eabe1ab4d00969b947e",
+      "size": 1348
+    },
+    {
+      "path": "workflows/response-governance.md",
+      "sha256": "eb5d0bbe3e1e8e7e44b173597165aca426770e76032f7a3ba66a330434eb8985",
+      "size": 1488
+    },
+    {
+      "path": "workflows/triage.md",
+      "sha256": "bf9aba6a0c5370b2318ce541df06f68aba7105a1ab477efc7219d4084e9dbce8",
+      "size": 1280
+    }
+  ]
+}

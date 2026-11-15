@@ -1,0 +1,9 @@
+{
+  "id": "B19",
+  "title": "Aprovação já delimitada",
+  "prompt": "Prepare a ação aprovada e diga o que falta para executar.",
+  "input": {
+    "approval": "alvo endpoint-lab, tenant-lab, owner e janela confirmados",
+    "connector": null
+  }
+}

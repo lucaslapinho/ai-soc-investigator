@@ -1,0 +1,9 @@
+{
+  "id": "B09",
+  "title": "Timezone ausente",
+  "prompt": "Monte a timeline.",
+  "input": {
+    "time": "14/11/2026 09:00",
+    "timezone": null
+  }
+}

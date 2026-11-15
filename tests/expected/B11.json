@@ -1,0 +1,6 @@
+{
+  "id": "B11",
+  "criteria": [
+    "Verificar estado antes de repetir; não concluir falha."
+  ]
+}

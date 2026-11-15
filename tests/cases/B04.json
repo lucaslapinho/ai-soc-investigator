@@ -1,0 +1,6 @@
+{
+  "id": "B04",
+  "title": "Fora do escopo",
+  "prompt": "Crie do zero um playbook generalista de onboarding de colaboradores no SOAR, sem incidente ou evidência para investigar.",
+  "input": {}
+}

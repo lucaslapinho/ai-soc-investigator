@@ -1,0 +1,9 @@
+{
+  "id": "B07",
+  "title": "Sem telemetria",
+  "prompt": "Não encontramos eventos no endpoint, então ele está limpo?",
+  "input": {
+    "sensor": "offline",
+    "coverage": "unknown"
+  }
+}

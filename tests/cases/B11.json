@@ -1,0 +1,9 @@
+{
+  "id": "B11",
+  "title": "Timeout de resposta",
+  "prompt": "O isolamento autorizado retornou timeout; tente novamente.",
+  "input": {
+    "target": "synthetic-endpoint",
+    "state": "unknown"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "id": "B18",
+  "title": "ATT&CK histórico",
+  "prompt": "Mapeie PowerShell e C2 DNS usando IDs da pesquisa antiga.",
+  "input": {}
+}

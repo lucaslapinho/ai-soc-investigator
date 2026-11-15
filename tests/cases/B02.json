@@ -1,0 +1,30 @@
+{
+  "id": "B02",
+  "title": "Malícia comprovada e escopo incompleto",
+  "prompt": "Investigue o caso e entregue relatório JSON completo conforme a Skill.",
+  "input": {
+    "tenant": "tenant-lab",
+    "timezone": "UTC",
+    "time_window": "2026-11-14T12:00:00Z/2026-11-14T12:05:00Z",
+    "evidence": [
+      {
+        "id": "EV-001",
+        "source": "endpoint export sintético",
+        "event_time": "2026-11-14T12:01:00Z",
+        "endpoint_id": "lab-endpoint",
+        "detail": "Processo não autorizado associado à criptografia de arquivos do endpoint."
+      },
+      {
+        "id": "EV-002",
+        "source": "revisão sintética do responsável",
+        "event_time": "2026-11-14T12:02:00Z",
+        "detail": "Arquivos de trabalho tornaram-se ilegíveis após as alterações do processo. Não houve job de criptografia autorizado."
+      }
+    ],
+    "collected_at": "2026-11-14T12:10:00Z",
+    "collector": "analyst-synthetic",
+    "other_hosts": "sem dados",
+    "connectors": [],
+    "authorization": "Somente análise dos anexos; nenhuma contenção autorizada."
+  }
+}

@@ -1,0 +1,229 @@
+{
+  "schema_version": "0.1.0",
+  "id": "SIM-INC-001",
+  "category": "ransomware",
+  "created_at": "2026-11-14T12:10:00Z",
+  "updated_at": "2026-11-14T12:10:00Z",
+  "context": {
+    "tenant_ref": "tenant-synthetic",
+    "original_timezone": "UTC",
+    "scope_description": "Caso 100% sintético: avaliar criptografia em um endpoint; nenhum ambiente real foi consultado.",
+    "data_handling": "Dados fictícios para documentação; não contêm payload ou credenciais."
+  },
+  "classification": "MALICIOUS",
+  "severity": "High",
+  "confidence": "High",
+  "investigation_status": "Incomplete",
+  "justification": {
+    "summary": "EV-001 e EV-002 demonstram, neste cenário fictício, criptografia não autorizada; extensão a shares permanece desconhecida.",
+    "evidence_ids": [
+      "EV-001",
+      "EV-002"
+    ],
+    "severity_reason": "Dano confirmado em um endpoint, sem comprovação de serviço essencial afetado.",
+    "confidence_reason": "Evidência direta concordante no cenário; confiança na classificação não implica escopo completo."
+  },
+  "evidence": {
+    "items": [
+      {
+        "id": "EV-001",
+        "source_id": "SRC-001",
+        "locator": "synthetic-endpoint-export.json#event-1",
+        "observed_at": "2026-11-14T12:01:00Z",
+        "original_time": "2026-11-14T12:01:00Z",
+        "original_timezone": "UTC",
+        "collected_at": "2026-11-14T12:10:00Z",
+        "collector": "synthetic-analyst",
+        "kind": "Observation",
+        "summary": "Export fictício liga processo ao início de criptografia não autorizada.",
+        "sha256": null,
+        "integrity_notes": "Artefato narrativo sintético; bytes de coleta real não existem, hash não calculado."
+      },
+      {
+        "id": "EV-002",
+        "source_id": "SRC-002",
+        "locator": "synthetic-file-review.txt#observation-1",
+        "observed_at": "2026-11-14T12:02:00Z",
+        "original_time": "2026-11-14T12:02:00Z",
+        "original_timezone": "UTC",
+        "collected_at": "2026-11-14T12:10:00Z",
+        "collector": "synthetic-analyst",
+        "kind": "Observation",
+        "summary": "Verificação fictícia confirma arquivos alterados e indisponíveis pelo mesmo processo, sem job autorizado.",
+        "sha256": null,
+        "integrity_notes": "Dado sintético declarado; nenhuma inspeção em host real."
+      }
+    ],
+    "supporting_ids": [
+      "EV-001",
+      "EV-002"
+    ],
+    "opposing_ids": [],
+    "opposing_assessment": "Nenhuma evidência contrária fornecida; não equivale a busca exaustiva. A hipótese de job autorizado foi excluída no cenário fornecido."
+  },
+  "sources": [
+    {
+      "id": "SRC-001",
+      "product": "Synthetic endpoint export",
+      "tenant_ref": "tenant-synthetic",
+      "locator": "synthetic-endpoint-export.json",
+      "coverage": "Um endpoint, 12:00–12:05 UTC, cenário sintético.",
+      "access_status": "Provided",
+      "limitations": [
+        "Sem cobertura dos shares."
+      ]
+    },
+    {
+      "id": "SRC-002",
+      "product": "Synthetic file review",
+      "tenant_ref": "tenant-synthetic",
+      "locator": "synthetic-file-review.txt",
+      "coverage": "Arquivos descritos na fixture fictícia.",
+      "access_status": "Provided",
+      "limitations": [
+        "Não representa coleta forense real."
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "id": "Q-001",
+      "source_id": "SRC-001",
+      "tenant_ref": "tenant-synthetic",
+      "language": "Investigation plan",
+      "expression": "Pesquisar atividade relacionada em shares e outros endpoints com schema real.",
+      "status": "Unavailable",
+      "executed_at": null,
+      "result_ref": null,
+      "row_count": null,
+      "error": "Nenhum tenant conectado neste exemplo.",
+      "coverage_notes": "Plano não executado."
+    }
+  ],
+  "entities": [
+    {
+      "id": "ENT-001",
+      "type": "Endpoint",
+      "namespace": "synthetic-endpoint",
+      "value": "synthetic-device-001",
+      "tenant_ref": "tenant-synthetic",
+      "evidence_ids": [
+        "EV-001",
+        "EV-002"
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "id": "TL-001",
+      "time_utc": "2026-11-14T12:01:00Z",
+      "original_time": "2026-11-14T12:01:00Z",
+      "original_timezone": "UTC",
+      "precision": "Exact",
+      "clock_skew_notes": "Horário definido na fixture; não medido em sensor.",
+      "event": "Início de criptografia no cenário.",
+      "entity_ids": [
+        "ENT-001"
+      ],
+      "evidence_ids": [
+        "EV-001"
+      ],
+      "kind": "Observation"
+    },
+    {
+      "id": "TL-002",
+      "time_utc": "2026-11-14T12:02:00Z",
+      "original_time": "2026-11-14T12:02:00Z",
+      "original_timezone": "UTC",
+      "precision": "Exact",
+      "clock_skew_notes": "Horário definido na fixture.",
+      "event": "Dano confirmado na narrativa sintética.",
+      "entity_ids": [
+        "ENT-001"
+      ],
+      "evidence_ids": [
+        "EV-002"
+      ],
+      "kind": "Observation"
+    }
+  ],
+  "attack": [
+    {
+      "id": "T1486",
+      "name": "Data Encrypted for Impact",
+      "source_url": "https://attack.mitre.org/techniques/T1486/",
+      "verified_on": "2026-11-14",
+      "evidence_ids": [
+        "EV-001",
+        "EV-002"
+      ],
+      "rationale": "Criptografia não autorizada para impacto sustentada no cenário sintético."
+    }
+  ],
+  "scope": {
+    "confirmed_entity_ids": [
+      "ENT-001"
+    ],
+    "potential_entity_ids": [],
+    "coverage": "Um endpoint no cenário.",
+    "limitations": [
+      "Outros ativos não investigados."
+    ]
+  },
+  "impact": {
+    "status": "Confirmed",
+    "description": "Arquivos indisponíveis no endpoint fictício; sem quantificação inventada.",
+    "evidence_ids": [
+      "EV-002"
+    ]
+  },
+  "gaps": [
+    {
+      "id": "GAP-001",
+      "description": "Extensão para shares/hosts não determinada.",
+      "priority": "High",
+      "owner": "SOC responsável",
+      "next_step": "Obter export autorizado dos shares e endpoints correlatos."
+    }
+  ],
+  "actions": [
+    {
+      "id": "ACT-001",
+      "status": "Proposed",
+      "tenant_ref": "tenant-synthetic",
+      "target_entity_ids": [
+        "ENT-001"
+      ],
+      "effect": "ExternalWrite",
+      "description": "Isolar endpoint confirmado após avaliação do serviço e autorização.",
+      "justification_evidence_ids": [
+        "EV-001",
+        "EV-002"
+      ],
+      "human_approval_required": true,
+      "approval": null,
+      "preconditions": [
+        "Confirmar ID/tenant e owner.",
+        "Verificar VIP, criticidade, privilégios e canal de gestão."
+      ],
+      "impact_assessment": "Pode interromper conectividade de negócio; impacto precisa de revisão humana.",
+      "rollback": "Restaurar conectividade apenas após liberação do responsável e verificação de segurança.",
+      "executor": null,
+      "execution": null
+    }
+  ],
+  "human_approval_required": true,
+  "next_steps": [
+    "Verificar extensão do escopo.",
+    "Solicitar decisão humana para proposta delimitada."
+  ],
+  "references": [
+    {
+      "id": "REF-001",
+      "title": "MITRE T1486",
+      "url": "https://attack.mitre.org/techniques/T1486/",
+      "accessed_on": "2026-11-14",
+      "scope": "Definição documental, sem provar incidente real."
+    }
+  ]
+}

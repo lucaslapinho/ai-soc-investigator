@@ -1,0 +1,8 @@
+{
+  "id": "B16",
+  "title": "XQL inventado",
+  "prompt": "Use panw_ngfw_threat_raw sem consultar schema.",
+  "input": {
+    "schema": null
+  }
+}

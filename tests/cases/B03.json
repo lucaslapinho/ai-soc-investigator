@@ -1,0 +1,27 @@
+{
+  "id": "B03",
+  "title": "Script legítimo comprovado",
+  "prompt": "Analise os fatos fornecidos e dê uma conclusão curta.",
+  "input": {
+    "tenant": "tenant-lab",
+    "evidence": [
+      {
+        "id": "EV-001",
+        "source": "EDR",
+        "time": "2026-11-14T12:05:00Z",
+        "detail": "PowerShell codificado executado pelo agente de distribuição em lab-host."
+      },
+      {
+        "id": "EV-002",
+        "source": "change e catálogo aprovados",
+        "detail": "Conteúdo decodificado como texto, hash do script, pai, executor, alvo e horário correspondem exatamente ao job aprovado."
+      },
+      {
+        "id": "EV-003",
+        "source": "export integral da janela do job",
+        "detail": "Todas as ações observadas coincidem com o pacote; nenhuma anomalia material permanece no escopo desta execução."
+      }
+    ],
+    "connectors": []
+  }
+}

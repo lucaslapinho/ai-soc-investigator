@@ -1,0 +1,296 @@
+{
+  "date": "2026-11-14",
+  "python": "3.12.14",
+  "dependencies": {
+    "jsonschema": "4.26.0",
+    "PyYAML": "6.0.3"
+  },
+  "checks": [
+    {
+      "check": "frontmatter",
+      "status": "PASS",
+      "detail": {
+        "name": "soc-ai-investigator",
+        "lines": 66
+      }
+    },
+    {
+      "check": "layout",
+      "status": "PASS",
+      "detail": {
+        "agents": 9,
+        "operational_cases": 25
+      }
+    },
+    {
+      "check": "markdown-local-links",
+      "status": "PASS",
+      "detail": {
+        "local_links_checked": 287,
+        "markdown_check": "fence balance and local link resolution; not full CommonMark/render lint"
+      }
+    },
+    {
+      "check": "json-parse",
+      "status": "PASS",
+      "detail": {
+        "json_files": 47,
+        "duplicate_keys": "rejected"
+      }
+    },
+    {
+      "check": "schema-semantic-regressions",
+      "status": "PASS",
+      "detail": {
+        "count": 27,
+        "cases": [
+          {
+            "case": "synthetic-malicious-example",
+            "status": "PASS",
+            "accepted": true,
+            "observed_errors": []
+          },
+          {
+            "case": "benign-positive-contract",
+            "status": "PASS",
+            "accepted": true,
+            "observed_errors": []
+          },
+          {
+            "case": "missing-evidence-positive-contract",
+            "status": "PASS",
+            "accepted": true,
+            "observed_errors": []
+          },
+          {
+            "case": "invalid-enum",
+            "status": "PASS",
+            "accepted": false,
+            "observed_errors": [
+              "classification: 'Malicious' is not one of ['MALICIOUS', 'BENIGN', 'SUSPICIOUS']"
+            ]
+          },
+          {
+            "case": "unexpected-property",
+            "status": "PASS",
+            "accepted": false,
+            "observed_errors": [
+              "/: Additional properties are not allowed ('secret' was unexpected)"
+            ]
+          },
+          {
+            "case": "invalid-date",
+            "status": "PASS",
+            "accepted": false,
+            "observed_errors": [
+              "created_at: '2026-02-31T12:00:00Z' is not a 'date-time'"
+            ]
+          },
+          {
+            "case": "missing-required",
+            "status": "PASS",
+            "accepted": false,
+            "observed_errors": [
+              "/: 'impact' is a required property"
+            ]
+          },
+          {
+            "case": "suspicious-complete",
+            "status": "PASS",
+            "accepted": false,
+            "observed_errors": [
+              "investigation_status: 'Complete' is not one of ['Incomplete', 'Requires Human Review']"
+            ]
+          },
+          {
+            "case": "benign-incomplete",
+            "status": "PASS",
+            "accepted": false,
+            "observed_errors": [
+              "investigation_status: 'Complete' was expected"
+            ]
+          },
+          {
+            "case": "false-executed-without-approval",
+            "status": "PASS",
+            "accepted": false,
+            "observed_errors": [
+              "actions/0/approval: None is not of type 'object'",
+              "actions/0/execution: None is not of type 'object'"
+            ]
+          },
+          {
+            "case": "timeout-without-execution-record",
+            "status": "PASS",
+            "accepted": false,
+            "observed_errors": [
+              "actions/0/approval: None is not of type 'object'",
+              "actions/0/execution: None is not of type 'object'"
+            ]
+          },
+          {
+            "case": "invalid-hash",
+            "status": "PASS",
+            "accepted": false,
+            "observed_errors": [
+              "evidence/items/0/sha256: 'abc123' does not match '^[a-f0-9]{64}$'"
+            ]
+          },
+          {
+            "case": "unresolved-evidence",
+            "status": "PASS",
+            "accepted": false,
+            "observed_errors": [
+              "justification: unresolved ID EV-missing"
+            ]
+          },
+          {
+            "case": "duplicate-evidence",
+            "status": "PASS",
+            "accepted": false,
+            "observed_errors": [
+              "Duplicate IDs in evidence"
+            ]
+          },
+          {
+            "case": "cross-tenant-source",
+            "status": "PASS",
+            "accepted": false,
+            "observed_errors": [
+              "SRC-001: cross-tenant source"
+            ]
+          },
+          {
+            "case": "cross-tenant-entity",
+            "status": "PASS",
+            "accepted": false,
+            "observed_errors": [
+              "ENT-001: cross-tenant entity"
+            ]
+          },
+          {
+            "case": "original-utc-mismatch",
+            "status": "PASS",
+            "accepted": false,
+            "observed_errors": [
+              "TL-001: original time and UTC disagree"
+            ]
+          },
+          {
+            "case": "false-query-executed",
+            "status": "PASS",
+            "accepted": false,
+            "observed_errors": [
+              "queries/0/executed_at: None is not of type 'string'",
+              "queries/0/result_ref: None is not of type 'string'"
+            ]
+          },
+          {
+            "case": "observation-from-unavailable-source",
+            "status": "PASS",
+            "accepted": false,
+            "observed_errors": [
+              "EV-001: observed evidence from unavailable source"
+            ]
+          },
+          {
+            "case": "wrong-attack-url",
+            "status": "PASS",
+            "accepted": false,
+            "observed_errors": [
+              "T1486: ATT&CK URL mismatch"
+            ]
+          },
+          {
+            "case": "authorized-execution-contract-synthetic-only",
+            "status": "PASS",
+            "accepted": true,
+            "observed_errors": []
+          },
+          {
+            "case": "approval-wrong-target",
+            "status": "PASS",
+            "accepted": false,
+            "observed_errors": [
+              "ACT-001: approval targets mismatch"
+            ]
+          },
+          {
+            "case": "approval-wrong-tenant",
+            "status": "PASS",
+            "accepted": false,
+            "observed_errors": [
+              "ACT-001: approval tenant mismatch"
+            ]
+          },
+          {
+            "case": "execution-before-approval",
+            "status": "PASS",
+            "accepted": false,
+            "observed_errors": [
+              "ACT-001: execution predates approval"
+            ]
+          },
+          {
+            "case": "approval-expired",
+            "status": "PASS",
+            "accepted": false,
+            "observed_errors": [
+              "ACT-001: execution after approval expired"
+            ]
+          },
+          {
+            "case": "execution-no-verification",
+            "status": "PASS",
+            "accepted": false,
+            "observed_errors": [
+              "actions/0/execution/verification_evidence_ids: [] should be non-empty"
+            ]
+          },
+          {
+            "case": "verification-only-inference",
+            "status": "PASS",
+            "accepted": false,
+            "observed_errors": [
+              "ACT-001: verification cannot be only inference/hypothesis"
+            ]
+          }
+        ],
+        "scope": "Schema + referential/time/approval invariants, not judgment of evidence truth"
+      }
+    },
+    {
+      "check": "python-compile",
+      "status": "PASS",
+      "detail": {
+        "python_files": 3
+      }
+    },
+    {
+      "check": "query-textual-sanity",
+      "status": "PASS",
+      "detail": {
+        "kql": 3,
+        "xql": 1,
+        "scope": "Textual sanity only; parser compilation and tenant execution NOT RUN"
+      }
+    },
+    {
+      "check": "heuristic-secrets-scan",
+      "status": "PASS",
+      "detail": {
+        "files": 137,
+        "scope": "Heuristic known private-key/token patterns; not a guarantee that all sensitive data is absent"
+      }
+    },
+    {
+      "check": "source-package",
+      "status": "PASS",
+      "detail": {
+        "file_count": 62,
+        "sha256": "38fac7d020d12d6fc77a0fb1e3678489470130260aa0cae08a2b0a317f2238cc",
+        "scope": "Archive integrity, closure and reproducibility; import NOT RUN"
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "id": "B03",
+  "criteria": [
+    "BENIGN, Complete, confiança proporcional.",
+    "Não confundir codificação com malícia.",
+    "Limitar conclusão ao job sem garantir host globalmente limpo."
+  ]
+}

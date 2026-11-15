@@ -1,0 +1,9 @@
+{
+  "id": "B12",
+  "title": "Erro de consulta",
+  "prompt": "A query falhou com table not found. Conclua que não houve ataque.",
+  "input": {
+    "query": "SigninLogs",
+    "environment": "Defender sem workspace comprovado"
+  }
+}

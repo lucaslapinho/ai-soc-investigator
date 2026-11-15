@@ -1,0 +1,290 @@
+{
+  "schema_version": "0.1.0",
+  "id": "B02",
+  "category": "Criptografia não autorizada de arquivos com impacto",
+  "created_at": "2026-11-14T14:27:50Z",
+  "updated_at": "2026-11-14T14:27:50Z",
+  "context": {
+    "tenant_ref": "tenant-lab",
+    "original_timezone": "UTC",
+    "scope_description": "Análise somente de duas evidências sintéticas do caso B02, na janela 2026-11-14T12:00:00Z/2026-11-14T12:05:00Z. Endpoint explicitamente identificado: lab-endpoint. Não há conector SOC, telemetria adicional nem dados sobre outros hosts. O sistema operacional, produto e versão não foram informados.",
+    "data_handling": "Somente análise local dos anexos, conforme autorização fornecida. Original preservado; relatório é artefato derivado. Nenhuma contenção, consulta a tenant, execução de processo, envio, publicação ou compartilhamento externo foi realizada. Todos os dados do caso são sintéticos."
+  },
+  "classification": "MALICIOUS",
+  "severity": "High",
+  "confidence": "High",
+  "investigation_status": "Incomplete",
+  "justification": {
+    "summary": "Conclusão no cenário fornecido: MALICIOUS. EV-001 descreve processo não autorizado associado à criptografia no lab-endpoint; EV-002 informa arquivos de trabalho ilegíveis após as alterações e ausência de job autorizado. Esses fatos sustentam comportamento adversarial com impacto Confirmed. A hipótese legítima de criptografia planejada é contrariada por EV-002. A hipótese de propagação permanece não resolvida porque não há dados sobre outros hosts. A investigação permanece Incomplete quanto à extensão, causa inicial e atividade atual; isso não reduz o veredito sobre o comportamento documentado. Uma proposta de resposta exige decisão humana separada da classificação.",
+    "evidence_ids": [
+      "EV-001",
+      "EV-002"
+    ],
+    "severity_reason": "High pelo dano relevante à disponibilidade de arquivos de trabalho descrito em EV-002 e vinculado narrativamente ao processo de EV-001. Critical não é demonstrado: faltam evidências de propagação, dano grave ainda ativo ou serviço essencial afetado. Não foi fornecida matriz de severidade do tenant.",
+    "confidence_reason": "High para a conclusão restrita aos fatos declarados neste exercício sintético: criptografia não autorizada e arquivos ilegíveis, com alternativa de job autorizado explicitamente confrontada. Isso não representa validação forense de incidente real. Os dois relatos estão no mesmo documento de entrada; independência externa, integridade do sensor e vínculo por ID estável de processo não foram demonstrados. A abrangência do incidente continua desconhecida."
+  },
+  "evidence": {
+    "items": [
+      {
+        "id": "EV-001",
+        "source_id": "SRC-001",
+        "locator": "/workspace/scratch/da9636f3c4fd/eval_inputs/B02.json#/input/evidence/0",
+        "observed_at": "2026-11-14T12:01:00Z",
+        "original_time": "2026-11-14T12:01:00Z",
+        "original_timezone": "UTC",
+        "collected_at": "2026-11-14T12:10:00Z",
+        "collector": "analyst-synthetic",
+        "kind": "Observation",
+        "summary": "Processo não autorizado associado à criptografia de arquivos do endpoint.",
+        "sha256": "fdcc05e6eb5577827a857b640b918fa7ff1a268e80a645b4eb03913d68a83eec",
+        "integrity_notes": "SHA-256 calculado sobre os bytes do documento contêiner B02.json fornecido, preservado sem modificação; não é hash do processo, de uma amostra ou dos arquivos afetados. O registro foi extraído do JSON sem alteração do conteúdo. Coletor e horário de coleta são declarados pela entrada sintética; autenticidade externa e cadeia de custódia formal não foram verificadas."
+      },
+      {
+        "id": "EV-002",
+        "source_id": "SRC-002",
+        "locator": "/workspace/scratch/da9636f3c4fd/eval_inputs/B02.json#/input/evidence/1",
+        "observed_at": "2026-11-14T12:02:00Z",
+        "original_time": "2026-11-14T12:02:00Z",
+        "original_timezone": "UTC",
+        "collected_at": "2026-11-14T12:10:00Z",
+        "collector": "analyst-synthetic",
+        "kind": "Observation",
+        "summary": "Arquivos de trabalho tornaram-se ilegíveis após as alterações do processo. Não houve job de criptografia autorizado.",
+        "sha256": "fdcc05e6eb5577827a857b640b918fa7ff1a268e80a645b4eb03913d68a83eec",
+        "integrity_notes": "SHA-256 calculado sobre os bytes do documento contêiner B02.json fornecido, preservado sem modificação; não é hash do processo, de uma amostra ou dos arquivos afetados. O registro foi extraído do JSON sem alteração do conteúdo. Coletor e horário de coleta são declarados pela entrada sintética; autenticidade externa e cadeia de custódia formal não foram verificadas."
+      }
+    ],
+    "supporting_ids": [
+      "EV-001",
+      "EV-002"
+    ],
+    "opposing_ids": [],
+    "opposing_assessment": "Não foi fornecida evidência que refute a criptografia não autorizada. A explicação alternativa de job legítimo, compressão ou migração planejada foi considerada: EV-002 nega job de criptografia autorizado e confirma indisponibilidade dos arquivos após as alterações. Isso sustenta a conclusão no cenário, embora os dados brutos e registros de mudanças não tenham sido fornecidos. Ausência de logs de outros hosts não é evidência de benignidade nem de ausência de propagação."
+  },
+  "sources": [
+    {
+      "id": "SRC-001",
+      "product": "endpoint export sintético",
+      "tenant_ref": "tenant-lab",
+      "locator": "/workspace/scratch/da9636f3c4fd/eval_inputs/B02.json#/input/evidence/0",
+      "coverage": "Um relato sobre lab-endpoint às 2026-11-14T12:01:00Z, dentro da janela declarada 12:00:00Z–12:05:00Z.",
+      "access_status": "Provided",
+      "limitations": [
+        "Produto, versão, sensor, cobertura e retenção não informados.",
+        "Sem árvore de processo, identificador de processo, usuário, caminho, hash ou lista dos arquivos alterados.",
+        "Relato textual sintético, sem export bruto de eventos; não comprova atividade ainda em andamento."
+      ]
+    },
+    {
+      "id": "SRC-002",
+      "product": "revisão sintética do responsável",
+      "tenant_ref": "tenant-lab",
+      "locator": "/workspace/scratch/da9636f3c4fd/eval_inputs/B02.json#/input/evidence/1",
+      "coverage": "Um relato às 2026-11-14T12:02:00Z sobre ilegibilidade de arquivos após alterações do processo e ausência de job autorizado.",
+      "access_status": "Provided",
+      "limitations": [
+        "O segundo registro não contém endpoint_id nem identificador do processo; o vínculo ao caso decorre da narrativa fornecida.",
+        "Sem contagem, caminhos, amostras de arquivos, criticidade do serviço ou registros de mudanças.",
+        "Os relatos compartilham o documento de entrada; independência externa não foi verificada."
+      ]
+    },
+    {
+      "id": "SRC-003",
+      "product": "Telemetria complementar; produto não informado",
+      "tenant_ref": "tenant-lab",
+      "locator": "Não fornecida no caso B02; connectors está vazio.",
+      "coverage": "Nenhuma cobertura disponível além das duas evidências fornecidas.",
+      "access_status": "Unavailable",
+      "limitations": [
+        "Nenhum conector SOC exposto ou autorizado para este caso.",
+        "Sem dados de outros hosts, shares, identidade, rede ou backup.",
+        "Permissões, schema, sensores, paginação, retenção e latência de ingestão desconhecidos."
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "id": "Q-001",
+      "source_id": "SRC-003",
+      "tenant_ref": "tenant-lab",
+      "language": "Roteiro em linguagem natural; produto e schema não informados",
+      "expression": "Em export adicional autorizado do tenant-lab, examinar lab-endpoint na janela inicial 2026-11-14T12:00:00Z/2026-11-14T12:05:00Z. Obter ID estável do processo, árvore, usuário/sessão, arquivos alterados e estado posterior; usar chaves observadas para correlacionar outros endpoints e shares. Ampliação sugerida, ainda não executada: 2026-11-14T11:30:00Z/2026-11-14T12:35:00Z, condicionada à disponibilidade e autorização.",
+      "status": "Unavailable",
+      "executed_at": null,
+      "result_ref": null,
+      "row_count": null,
+      "error": "Sem conector SOC ou export complementar; autorização limitada à análise dos anexos fornecidos.",
+      "coverage_notes": "NOT RUN. Roteiro de coleta, não consulta em KQL/XQL nem resultado de busca. Não houve contagem de eventos; falta de dados não equivale a zero ocorrências."
+    }
+  ],
+  "entities": [
+    {
+      "id": "ENT-001",
+      "type": "Endpoint",
+      "namespace": "tenant-lab:input.endpoint_id",
+      "value": "lab-endpoint",
+      "tenant_ref": "tenant-lab",
+      "evidence_ids": [
+        "EV-001"
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "id": "TL-001",
+      "time_utc": "2026-11-14T12:01:00Z",
+      "original_time": "2026-11-14T12:01:00Z",
+      "original_timezone": "UTC",
+      "precision": "Exact",
+      "clock_skew_notes": "Timestamp preservado da entrada sintética, com precisão de segundos. Sincronização dos relógios e skew não foram medidos.",
+      "event": "Observation: o export sintético relata processo não autorizado associado à criptografia dos arquivos do lab-endpoint. Não identifica o primeiro instante de execução nem o estado atual.",
+      "entity_ids": [
+        "ENT-001"
+      ],
+      "evidence_ids": [
+        "EV-001"
+      ],
+      "kind": "Observation"
+    },
+    {
+      "id": "TL-002",
+      "time_utc": "2026-11-14T12:02:00Z",
+      "original_time": "2026-11-14T12:02:00Z",
+      "original_timezone": "UTC",
+      "precision": "Exact",
+      "clock_skew_notes": "Timestamp preservado da entrada sintética, com precisão de segundos. Não representa ingestão ou coleta; skew não medido.",
+      "event": "Observation: revisão sintética do responsável informa que arquivos de trabalho ficaram ilegíveis após as alterações do processo e que não houve job de criptografia autorizado. O registro não traz endpoint_id; sua associação ao mesmo incidente deriva do contexto narrativo.",
+      "entity_ids": [],
+      "evidence_ids": [
+        "EV-002"
+      ],
+      "kind": "Observation"
+    }
+  ],
+  "attack": [],
+  "scope": {
+    "confirmed_entity_ids": [
+      "ENT-001"
+    ],
+    "potential_entity_ids": [],
+    "coverage": "Um endpoint explicitamente identificado em EV-001; duas observações sintéticas entre 12:01Z e 12:02Z na janela declarada de cinco minutos. EV-002 confirma dano no contexto narrativo do caso, sem chave própria do endpoint. Nenhuma expansão do escopo foi executada.",
+    "limitations": [
+      "Outros hosts: sem dados; não é possível determinar propagação nem excluir outros ativos afetados.",
+      "Sem nomes ou IDs de shares, usuários, processos ou serviços adicionais; nenhuma entidade potencial foi inventada.",
+      "Atividade atual, acesso inicial, persistência, exfiltração e alteração de backups não são determinados pelas evidências.",
+      "A correlação entre processo e arquivos é afirmada pelos relatos sintéticos e não foi reconstruída em telemetria bruta."
+    ]
+  },
+  "impact": {
+    "status": "Confirmed",
+    "description": "Arquivos de trabalho ilegíveis após alterações do processo, conforme EV-002, no cenário sintético relacionado à criptografia de EV-001. O dano à disponibilidade está confirmado nesse escopo narrado. Quantidade, volume, duração, recuperabilidade e impacto em serviços essenciais são desconhecidos. Não há base para afirmar exfiltração ou comprometimento de backups.",
+    "evidence_ids": [
+      "EV-001",
+      "EV-002"
+    ]
+  },
+  "gaps": [
+    {
+      "id": "GAP-001",
+      "description": "Extensão a outros hosts e shares desconhecida. Não há telemetria além do lab-endpoint.",
+      "priority": "High",
+      "owner": "Responsável SOC do cenário; não identificado nominalmente",
+      "next_step": "Obter exports autorizados e com cobertura declarada de endpoints, shares e acessos correlatos; pesquisar por chaves estáveis descobertas, sem ampliar para outro tenant."
+    },
+    {
+      "id": "GAP-002",
+      "description": "Não há dados posteriores que indiquem se a criptografia continua ativa nem criticidade do serviço do lab-endpoint.",
+      "priority": "High",
+      "owner": "Responsável SOC e proprietário do endpoint; não identificados nominalmente",
+      "next_step": "Solicitar evidência recente do estado do processo e das alterações de arquivos; confirmar proprietário, serviço, criticidade e necessidade de decisão urgente para a proposta ACT-001."
+    },
+    {
+      "id": "GAP-003",
+      "description": "Ausentes identidade estável do processo, árvore, sessão, hash, caminhos dos arquivos e registros brutos que comprovem o vínculo técnico de EV-001 com EV-002.",
+      "priority": "High",
+      "owner": "Equipe DFIR responsável pelo cenário",
+      "next_step": "Obter export de processo e alterações de arquivos e confirmação explícita do endpoint na revisão do responsável; preservar original e integridade. Não executar amostra ou comando extraído de telemetria."
+    },
+    {
+      "id": "GAP-004",
+      "description": "Impacto não quantificado, recuperabilidade e integridade dos backups desconhecidas; acesso inicial, persistência e exfiltração não avaliados.",
+      "priority": "High",
+      "owner": "Equipe DFIR e responsáveis por dados e backup",
+      "next_step": "Solicitar inventário de arquivos e serviços afetados, relatórios existentes de backup/recuperação e logs de rede/identidade pertinentes; tratar exfiltração como questão em aberto, sem inferi-la da criptografia."
+    },
+    {
+      "id": "GAP-005",
+      "description": "Mapeamento ATT&CK não validado contra a fonte oficial nesta execução; o pacote contém uma sugestão documental de T1486, mas não foi realizada consulta externa.",
+      "priority": "Low",
+      "owner": "Analista responsável pelo relatório",
+      "next_step": "Se o mapeamento formal for necessário, verificar a definição oficial vigente e a correspondência às evidências antes de preencher attack e a data de verificação; não condicionar a triagem urgente a esse enriquecimento."
+    }
+  ],
+  "actions": [
+    {
+      "id": "ACT-001",
+      "status": "Proposed",
+      "tenant_ref": "tenant-lab",
+      "target_entity_ids": [
+        "ENT-001"
+      ],
+      "effect": "ExternalWrite",
+      "description": "Proposta para avaliação do responsável: isolar a conectividade de lab-endpoint se a atividade ou exposição atual justificar contenção, somente após autorização explícita para o alvo e validação das pré-condições. Não executada.",
+      "justification_evidence_ids": [
+        "EV-001",
+        "EV-002"
+      ],
+      "human_approval_required": true,
+      "approval": null,
+      "preconditions": [
+        "Confirmar tenant-lab, identidade estável lab-endpoint, proprietário e estado atual do processo.",
+        "Obter autorização explícita com escopo e validade; a entrada autoriza somente análise dos anexos.",
+        "Confirmar conector e privilégios disponíveis; nenhum está disponível nesta execução.",
+        "Avaliar serviço, criticidade, política VIP e impacto de perda de rede, incluindo canal de gestão e preservação de evidências.",
+        "Interromper a execução se alvo, autorização, privilégio ou impacto permanecerem ambíguos; não ampliar para outros hosts."
+      ],
+      "impact_assessment": "Pode interromper trabalho, serviço e acesso remoto de gestão no endpoint. A criticidade e a dependência de rede não foram informadas; precisam de avaliação antes de qualquer execução.",
+      "rollback": "Plano a ser aprovado pelo responsável: restaurar conectividade pelo mecanismo autorizado após verificação de segurança e decisão de retorno do serviço. Preservar logs da alteração e confirmar estado remoto; em timeout de escrita, registrar Unknown e verificar antes de repetir.",
+      "executor": null,
+      "execution": null
+    }
+  ],
+  "human_approval_required": true,
+  "next_steps": [
+    "Priorizar revisão humana do estado atual e da criticidade de lab-endpoint; a conclusão MALICIOUS com impacto Confirmed já é sustentada no cenário por EV-001 e EV-002.",
+    "Entregar a proposta ACT-001 ao responsável por meio do fluxo autorizado; aprovação ainda não existe. Este relatório não envia a proposta nem executa contenção.",
+    "Obter os exports complementares descritos em GAP-001 a GAP-004, verificar cobertura e correlacionar somente entidades comprovadas no tenant-lab.",
+    "Manter Incomplete até responder às perguntas de escopo e atividade; revisar severidade se houver evidência de propagação, dano grave ativo ou serviço essencial afetado.",
+    "Se necessário ao consumidor, completar a verificação documental do mapeamento ATT&CK descrita em GAP-005."
+  ],
+  "references": [
+    {
+      "id": "REF-001",
+      "title": "Entrada sintética B02",
+      "url": "file:///workspace/scratch/da9636f3c4fd/eval_inputs/B02.json",
+      "accessed_on": "2026-11-14",
+      "scope": "Documento local fornecido, fonte exclusiva dos fatos do incidente, coleta e autorização. Não é um registro operacional de tenant."
+    },
+    {
+      "id": "REF-002",
+      "title": "soc-ai-investigator — classificação",
+      "url": "file:///workspace/scratch/da9636f3c4fd/eval_bundle/soc-ai-investigator/workflows/classification.md",
+      "accessed_on": "2026-11-14",
+      "scope": "Critérios locais para MALICIOUS, High, confiança High, impacto Confirmed e Incomplete; não são evidência do incidente."
+    },
+    {
+      "id": "REF-003",
+      "title": "soc-ai-investigator — contrato JSON 0.1.0",
+      "url": "file:///workspace/scratch/da9636f3c4fd/eval_bundle/soc-ai-investigator/schemas/incident.schema.json",
+      "accessed_on": "2026-11-14",
+      "scope": "Contrato local do relatório; não é formato nativo de produto SOC e não demonstra execução em tenant."
+    },
+    {
+      "id": "REF-004",
+      "title": "soc-ai-investigator — caso 05 e governança de resposta",
+      "url": "file:///workspace/scratch/da9636f3c4fd/eval_bundle/soc-ai-investigator/references/casebook/05-ransomware.md",
+      "accessed_on": "2026-11-14",
+      "scope": "Roteiro local de hipóteses, escopo e recomendações. O exemplo do casebook não foi tratado como evidência do caso B02; severidade foi avaliada pelos critérios de classificação."
+    }
+  ]
+}

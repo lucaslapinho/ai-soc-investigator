@@ -1,0 +1,127 @@
+[
+  {
+    "id": 1,
+    "path": "references/casebook/01-windows-malware.md",
+    "title": "Malware Windows"
+  },
+  {
+    "id": 2,
+    "path": "references/casebook/02-linux-malware.md",
+    "title": "Malware Linux"
+  },
+  {
+    "id": 3,
+    "path": "references/casebook/03-suspicious-powershell.md",
+    "title": "PowerShell suspeito"
+  },
+  {
+    "id": 4,
+    "path": "references/casebook/04-credential-dumping.md",
+    "title": "Credential dumping"
+  },
+  {
+    "id": 5,
+    "path": "references/casebook/05-ransomware.md",
+    "title": "Ransomware"
+  },
+  {
+    "id": 6,
+    "path": "references/casebook/06-phishing-credentials.md",
+    "title": "Phishing e roubo de credenciais"
+  },
+  {
+    "id": 7,
+    "path": "references/casebook/07-password-spraying.md",
+    "title": "Password spraying e brute force"
+  },
+  {
+    "id": 8,
+    "path": "references/casebook/08-m365-compromise.md",
+    "title": "Comprometimento Microsoft 365"
+  },
+  {
+    "id": 9,
+    "path": "references/casebook/09-entra-anomalous-logon.md",
+    "title": "Logon anômalo Entra ID"
+  },
+  {
+    "id": 10,
+    "path": "references/casebook/10-gpo-change-deletion.md",
+    "title": "GPO alterada ou excluída"
+  },
+  {
+    "id": 11,
+    "path": "references/casebook/11-ad-privilege-escalation.md",
+    "title": "Escalação de privilégio AD"
+  },
+  {
+    "id": 12,
+    "path": "references/casebook/12-suspicious-admin-account.md",
+    "title": "Conta administrativa suspeita"
+  },
+  {
+    "id": 13,
+    "path": "references/casebook/13-lateral-movement.md",
+    "title": "Movimentação lateral"
+  },
+  {
+    "id": 14,
+    "path": "references/casebook/14-exfiltration.md",
+    "title": "Exfiltração"
+  },
+  {
+    "id": 15,
+    "path": "references/casebook/15-beaconing-c2.md",
+    "title": "Beaconing e C2"
+  },
+  {
+    "id": 16,
+    "path": "references/casebook/16-unauthorized-remote-access.md",
+    "title": "Acesso remoto não autorizado"
+  },
+  {
+    "id": 17,
+    "path": "references/casebook/17-webshell.md",
+    "title": "Webshell e aplicações web"
+  },
+  {
+    "id": 18,
+    "path": "references/casebook/18-vulnerability-exploitation.md",
+    "title": "Exploração de vulnerabilidades"
+  },
+  {
+    "id": 19,
+    "path": "references/casebook/19-cloud-workload.md",
+    "title": "Workload cloud comprometido"
+  },
+  {
+    "id": 20,
+    "path": "references/casebook/20-firewall-policy-change.md",
+    "title": "Políticas de firewall alteradas"
+  },
+  {
+    "id": 21,
+    "path": "references/casebook/21-sensitive-resource-access.md",
+    "title": "Acesso indevido a recurso sensível"
+  },
+  {
+    "id": 22,
+    "path": "references/casebook/22-cloud-permission-change.md",
+    "title": "Permissões cloud alteradas"
+  },
+  {
+    "id": 23,
+    "path": "references/casebook/23-security-control-tampering.md",
+    "title": "Adulteração de controles de segurança"
+  },
+  {
+    "id": 24,
+    "path": "references/casebook/24-legitimate-admin-tool-abuse.md",
+    "title": "Abuso de ferramentas administrativas legítimas"
+  },
+  {
+    "id": 25,
+    "path": "references/casebook/25-coordinated-campaign.md",
+    "title": "Campanha coordenada multiativos"
+  }
+]
